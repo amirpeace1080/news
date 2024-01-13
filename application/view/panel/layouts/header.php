@@ -19,7 +19,7 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo $this->url('home') ?>">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <?php      forech($categories as $category){  ?>
+                    <?php      foreach($categories as $category){  ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $this->url('home/category/' . $category['id']) ?>">
                         <?php
