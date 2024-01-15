@@ -1,6 +1,6 @@
 <?php
 
-$base_url = "http:localhost/news/";
+$base_url = "http://localhost/news/";
 $base_dir = "/news/";
 $temp = explode("?", $_SERVER["REQUEST_URI"]);
 $current_route = str_replace($base_url, "", $temp[0]);
