@@ -1,4 +1,4 @@
-</php
+<?php
 
 $this->include('panel.layouts.header');
 
