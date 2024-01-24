@@ -1,17 +1,17 @@
 <?php
 namespace application\model;
 
-use PDO ;
+use PDO;
 use PDOException;
 
 class Model {
     protected $connection;
-    public function __construct() {
+    public function __construct() {        
         if(!isset($connection)){
-            global $dbHost, $dbName, $dbUserName, $dbPassword;
-            $option = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC];
+            global $dbHost, $dbName, $dbUsername, $dbPassword;
+            $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];                        
             try{
-                $this->connection = new PDO('mysql:host = ' . $dbHost . ';dbName =' . $dbName , $dbUserName, $dbPassword, $option);
+                    $this->connection = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName, $dbUsername, $dbPassword, $options);
             }
             catch(PDOException $ex){
                 echo 'there is some problem' . $ex->getMessage();
@@ -28,7 +28,7 @@ class Model {
         try{
             if($values == null){
                 return $this->connection->query($query);
-            }else{
+            }else{                
                 $stmt = $this->connection->prepare($query);
                 $stmt->execute($values);
                 $result = $stmt;

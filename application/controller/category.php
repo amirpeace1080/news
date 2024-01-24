@@ -1,11 +1,11 @@
 <?php
 namespace application\controller;
 
-use application\model\category as CategoryModel;
+use application\model\Category as CategoryModel;
 
 class Category extends Controller {
-    public function index() {
-        $categroy = new CategoryModel();
+    public function index() {              
+        $categroy = new CategoryModel();        
         $categories = $categroy->all();
         return $this->view("panel.category.index", compact("categories"));
     }

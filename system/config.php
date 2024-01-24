@@ -1,14 +1,16 @@
 <?php
 
-$base_url = "http://localhost/news/";
-$base_dir = "/news/";
-$temp = explode("?", $_SERVER["REQUEST_URI"]);
-$current_route = str_replace($base_url, "", $temp[0]);
-unset($temp[0]);
+$base_url = 'http://localhost/news/';
+$base_dir = '/news/';
 
-$dbhost = "localhost";
-$dbname = "newsdb";
-$dbusername = "root";
-$dbpassword = "";
+$tmp = explode('?', $_SERVER['REQUEST_URI']);
+$current_route = str_replace($base_dir, "", $tmp[0]);
+unset($tmp);
+var_dump($current_route);
 
-?>
+
+//database Config
+$dbHost = 'localhost';
+$dbName = 'newsdb';
+$dbUsername = 'root';
+$dbPassword = '';

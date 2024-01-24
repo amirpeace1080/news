@@ -3,8 +3,8 @@ namespace application\model;
 
 class Category extends Model{
     public function all(){
-        $query = 'select * from categories';
-        $result = $this->query($query)->fetchAll();
+        $query = 'select * from categories';        
+        $result = $this->query($query)->fetchAll();        
         $this->closeConnection();
         return $result;
     }
