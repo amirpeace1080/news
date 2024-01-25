@@ -1,8 +1,4 @@
-<?php
-
-$this->include('panel.layouts.header');
-
-?>
+<?php $this->include('panel.layouts.header'); ?>
 
 <section class="mb-2 d-flex justify-content-between align-items-center ">
     <h2 class="h4">category</h2>
@@ -25,8 +21,8 @@ $this->include('panel.layouts.header');
                 <td><?php echo $category['name'] ?></td>
                 <td><?php echo $category['description'] ?></td>
                 <td>
-                    <a href="<?php $this->url('/category/edit' . $category['id']) ?>" class="btn btn-info btn-sm">edit</a>
-                    <a href="<?php $this->url('/category/destroy' . $category['id']) ?>" class="btn btn-danger btn-sm">delete</a>
+                    <a href="<?php $this->url('category/edit' . $category['id']) ?>" class="btn btn-info btn-sm">edit</a>
+                    <a href="<?php $this->url('category/destroy' . $category['id']) ?>" class="btn btn-danger btn-sm">delete</a>
 
                 </td>
             </tr>
@@ -35,8 +31,4 @@ $this->include('panel.layouts.header');
     </table>
 </section>
 
-<?php
-    $this->include('panel.layouts.footer');
-?>
-
-?>
+<?php $this->include('panel.layouts.footer'); ?>

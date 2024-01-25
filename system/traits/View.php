@@ -7,8 +7,8 @@ trait View{
         $dir = str_replace(".", "/", $dir);
         if($vars){
             extract($vars);
-            $path = realpath(dirname(__FILE__) . "/../../application/view/" . $dir  . ".php");            
-            if(!file_exists($path)){
+            $path = realpath(dirname(__FILE__) . "/../../application/view/" . $dir  . ".php");           
+            if(file_exists($path)){
                 return require_once($path);
             }else{
                 echo "this view  [ " . $dir . "] not exists";
@@ -16,7 +16,7 @@ trait View{
         }
     }
 
-    protected function assets($dir)
+    protected function asset($dir)
     {
         global $base_url;
         $path = $base_url . "public/" . $dir;
@@ -27,8 +27,8 @@ trait View{
         $dir = str_replace(".", "/", $dir);
         if($vars){
             extract($vars);
-            $path = realpath(dirname(__FILE__) . "../../application/view" . $dir  . ".php");
-            if(!file_exists($path)){
+            $path = realpath(dirname(__FILE__) . "/../../application/view" . $dir  . ".php");
+            if(file_exists($path)){
                 return require_once($path);
             }else{
                 echo "this view  [ " . $dir . "] not exists";
@@ -48,5 +48,3 @@ trait View{
     }
 
 }
-
-?>
