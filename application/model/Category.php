@@ -8,6 +8,7 @@ class Category extends Model{
         $this->closeConnection();
         return $result;
     }
+    
 
     public function posts($cat_id) {
         $query = 'select * from post where cat_id = ?' ;
@@ -17,8 +18,8 @@ class Category extends Model{
     }
 
     public function find($id){
-        $query = 'select * from post where id = ?' ;
-        $result = $this->query($query, [$id])->fetchAll();
+        $query = 'select * from categories where id = ?' ;
+        $result = $this->query($query, [$id])->fetch();
         $this->closeConnection();
         return $result;
     }

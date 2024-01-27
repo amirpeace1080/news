@@ -1,4 +1,4 @@
-<?php $this->include('panel.layouts.header'); ?>
+<?php $this->include('panel.layouts.header', compact("categories"));?>
 
 <section class="mb-2 d-flex justify-content-between align-items-center ">
     <h2 class="h4">category</h2>
@@ -20,9 +20,9 @@
                 <td><?php echo $category['id'] ?></td>
                 <td><?php echo $category['name'] ?></td>
                 <td><?php echo $category['description'] ?></td>
-                <td>
-                    <a href="<?php $this->url('category/edit' . $category['id']) ?>" class="btn btn-info btn-sm">edit</a>
-                    <a href="<?php $this->url('category/destroy' . $category['id']) ?>" class="btn btn-danger btn-sm">delete</a>
+                <td>                    
+                    <a href="<?php $this->url('category/edit/' . $category['id']) ?>" class="btn btn-info btn-sm">edit</a>
+                    <a href="<?php $this->url('category/destroy/' . $category['id']) ?>" class="btn btn-danger btn-sm">delete</a>
 
                 </td>
             </tr>
