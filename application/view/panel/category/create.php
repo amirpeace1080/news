@@ -1,8 +1,5 @@
-<?php
+<?php $this->include('panel.layouts.header'); ?>
 
-$this->include('panel.layouts.header');
-
-?>
 <form action="<?php $this->url('category/store') ?>" method="post">
     <section class="form-group">
         <label for="name">name</label>
@@ -17,6 +14,4 @@ $this->include('panel.layouts.header');
     <button type="submit" class="btn btn-primary">created</button>
 </form>
 
-<?php
-    $this->include('panel.layouts.footer');
-?>
+<?php $this->include('panel.layouts.footer'); ?>

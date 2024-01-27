@@ -1,6 +1,4 @@
-<?php
-$this->include('panel.layouts.header',['categories'=> $categories]);
-?>
+<?php $this->include('panel.layouts.header', ['categories'=> $categories]); ?>
 
 <section class="container my-5 ">
     <section class="row">
@@ -23,8 +21,4 @@ $this->include('panel.layouts.header',['categories'=> $categories]);
     </section>
 </section>
 
-<?php
-    $this->include('panel.layouts.footer');
-?>
-
-?>
+<?php $this->include('panel.layouts.footer'); ?>

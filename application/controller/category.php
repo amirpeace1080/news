@@ -7,7 +7,7 @@ class Category extends Controller {
     public function index() {           
         $categroy = new CategoryModel();        
         $categories = $categroy->all();
-        return $this->view("panel.category.index", 0);
+        return $this->view("panel.category.index", compact('categories'));
     }
      
     public function create() {
@@ -22,7 +22,7 @@ class Category extends Controller {
     public function store() {
         $category = new CategoryModel();
         $category->insert($_POST);
-        return $this->redirect("category");
+        return $this->redirect('category');
 
     }
     public function edit($id) {
