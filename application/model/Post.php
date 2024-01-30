@@ -25,7 +25,7 @@ class Post extends Model{
 
     public function update($id, $values){
         $query = 'update post set title =? ,cat_id =?, body=?, updated_at = now() where id = ?';
-        $this->execute($query, array_merge(array_values($values), [$id]));
+       $this->execute($query, array_merge(array_values($values), [$id]));
         $this->closeConnection();
     }
 

@@ -18,6 +18,7 @@ class Routing{
     public function run() {
         // $this-> current_route[0] = "Home";clearstatcache();
         $path = realpath(dirname(__FILE__) . "/../../application/controller/" . $this-> current_route[0]  . ".php");
+        // die(dirname(__FILE__) . "/../../application/controller/" . $this-> current_route[0]  . ".php");
          
         // die(dirname(__FILE__) . "./../../application/controller/" . $this-> current_route[0]  . ".php");
        

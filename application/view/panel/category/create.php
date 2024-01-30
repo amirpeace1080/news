@@ -4,8 +4,7 @@
     <section class="form-group">
         <label for="name">name</label>
         <input type="text" name="name" id="name" class="form-control" required placeholder="name...">
-    </section>
-
+    </section>   
     <section class="form-group">
         <label for="description">description</label>
         <input type="text" name="description" id="description" class="form-control" required placeholder="description...">

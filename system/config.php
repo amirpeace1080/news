@@ -6,7 +6,7 @@ $base_dir = '/news/';
 $tmp = explode('?', $_SERVER['REQUEST_URI']);
 $current_route = str_replace($base_dir, "", $tmp[0]);
 unset($tmp);
-var_dump($current_route);
+
 
 
 //database Config

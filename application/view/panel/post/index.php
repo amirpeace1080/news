@@ -22,11 +22,11 @@ $this->include('panel.layouts.header');
             <?php foreach($posts as $post){ ?>
             <tr>
                 <td><?php echo $post['id'] ?></td>
-                <td><?php echo $post['name'] ?></td>
-                <td><?php echo $post['description'] ?></td>
+                <td><?php echo $post['title'] ?></td>
+                <td><?php echo $post['body'] ?></td>
                 <td>
-                    <a href="<?php $this->url('/post/edit' . $post['id']) ?>" class="btn btn-info btn-sm">edit</a>
-                    <a href="<?php $this->url('/post/destroy' . $post['id']) ?>" class="btn btn-danger btn-sm">delete</a>
+                    <a href="<?php $this->url('/post/edit/' . $post['id']) ?>" class="btn btn-info btn-sm">edit</a>
+                    <a href="<?php $this->url('/post/destroy/' . $post['id']) ?>" class="btn btn-danger btn-sm">delete</a>
 
                 </td>
             </tr>

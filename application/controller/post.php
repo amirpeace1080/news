@@ -6,8 +6,8 @@ use application\model\Post as PostModel;
 class Post extends Controller {
     public function index() {
         $post = new PostModel();
-        $categories = $post->all();
-        return $this->view("panel.post.index", compact("categories"));
+        $posts = $post->all();
+        return $this->view("panel.post.index", compact("posts"));
     }
      
     public function create() {
